@@ -3,7 +3,7 @@ title: Sunbird UCI 🕊️
 sidebar_label: Overview
 slug: /
 hide_table_of_contents: true
-demoUrl: https://docs-template-main.vercel.app/
+demoUrl: https://uci-web-channel-master.vercel.app/login
 demoSourceUrl: https://github.com/Samagra-Development/docs-template
 ---
 
