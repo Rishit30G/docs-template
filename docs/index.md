@@ -1,5 +1,5 @@
 ---
-title: Sunbird UCI 🕊️
+title: Sunbird UCI Frontend 🕊️
 sidebar_label: Overview
 slug: /
 hide_table_of_contents: true
@@ -11,7 +11,7 @@ import DocsCard from '@components/global/DocsCard';
 import DocsCards from '@components/global/DocsCards';
 
 <head>
-  <title>Sunbird UCI [Refactoring Components]</title>
+  <title>Sunbird UCI Frontend</title>
   <meta
     name="description"
     content="your meta description"

@@ -3,7 +3,7 @@ module.exports = {
     'Getting Started': [
       'index',
       { type: 'category', label: 'Refactoring Components 🔄', items: ['intro/need', 'intro/requirements'] },
-      { type: 'category', label: 'Enketo 🚀', items: ['intro/enketo-intro', 'intro/enketo-integration'] },
+      { type: 'category', label: 'Developer 🧑🏻‍💻', items: ['intro/enketo-intro']},
     ],
   },
 

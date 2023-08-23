@@ -100,5 +100,3 @@ yarn start or npm run dev
 ```
 
 This is implemented through [NextJS](nextjs.org) and [socket-package](https://www.npmjs.com/package/socket-package)
-
-_You can check the detailed demo [here](https://drive.google.com/file/d/1KtZGNZ9_6wisFQo1Wy45zPF50W3kOLTI/view?usp=sharing)_. 
