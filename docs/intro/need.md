@@ -25,6 +25,6 @@ To bolster our refactoring and optimization efforts, the socket-connection logic
 ✅ **Setting up Redux for global state management:**
 Recognizing the need for a streamlined state management solution to boost application performance, we integrated Redux into our tech stack. By transitioning crucial pieces of data like messages and getbotlist to Redux, we've enabled a more cohesive and optimized state management. This strategic move ensures faster loading times and a more consistent user experience
 
-✅ **Testing the application: **
+✅ **Testing the application:**
 Testing is paramount to ensuring that our application not only functions as expected but also remains robust in various scenarios. To that end, we employed PlaywrightJS for crafting diverse test cases. Our tests rigorously assess various scenarios such as ensuring socket connection integrity during messaging, evaluating application response under no internet connectivity,
 and validating that there are no multiple, unintended socket instances.
