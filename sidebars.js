@@ -6,7 +6,7 @@ module.exports = {
       { type: 'category', label: 'Theming and Configuration ⚙️', items: ['intro/theme'] },
       { type: 'category', label: 'Developer 🧑🏻‍💻', items: ['intro/enketo-intro'] },
       { type: 'category', label: 'Adopter 👩🏻‍🦰', items: ['intro/enketo-user'] },
-      'intro/requirements', // Moved 'Requirements' to a single file
+      'intro/requirements',
     ],
   },
 
