@@ -77,6 +77,8 @@ The `config` feature empowers you to centralize and manage various visual and fu
    - To adjust an existing setting, locate the appropriate section and change the desired properties.
    - For example, to change the text color of the chat icon, find the `icon` section and update the `colorScheme` property.
 
+   <img src="https://i.postimg.cc/k4sjcB94/carbon-3.png" width="800px"/>
+
 4. **Adding New Components**:
    - You can introduce new UI components to the `config` object.
    - Define a new section, such as `newComponent`, and configure its properties.
@@ -164,7 +166,7 @@ For example:
 
 Now, you can focus on writing code while Husky and our consistent code tools take care of maintaining clean and formatted code automatically.
 
-## Global Theme Management and Dark Mode 🎨
+### Global Theme Management and Dark Mode 🎨
 
 Maintaining a consistent and visually appealing user interface is crucial for any application. Our project provides a robust global theme management system that includes support for a dark mode. This allows you to seamlessly manage the appearance of your app and provide a better user experience.
 
@@ -179,6 +181,8 @@ Here are some key components of the theme configuration:
 - **`dark_theme`**: Defines the properties for the dark mode. It specifies background colors, font colors, and other visual elements that contribute to a cohesive dark mode experience.
 
 - **`light_theme`**: Specifies the properties for the light mode, including background colors, font colors, and shadows.
+
+<img src="https://i.postimg.cc/28SKgnXQ/carbon-1.png" />
 
 #### Using the Theme Provider
 
