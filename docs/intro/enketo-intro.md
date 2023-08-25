@@ -251,7 +251,7 @@ The `Home` component retrieves user data from the Redux store using the `useSele
 
 ## Socket IO 🔌
 
-![](https://i.postimg.cc/PrpYXcBB/Screenshot-2023-08-25-080902.png)
+![](https://i.postimg.cc/vm1QJBbp/Screenshot-2023-08-25-080902.png)
 
 ### SocketConnection Component 🧩
 
