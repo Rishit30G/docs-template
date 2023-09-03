@@ -249,6 +249,31 @@ The `Home` component retrieves user data from the Redux store using the `useSele
 - **Usage**:
   The hook takes a selector function as its argument. This function receives the entire store state and returns the part of the state that this component is interested in.
 
+### sendMessage Slice 📩
+
+![](https://i.postimg.cc/sgcBQLnb/Screenshot-2023-09-03-140458.png)
+
+- The userMessages Redux slice manages state related to user messages within the application. Created using Redux Toolkit's createSlice function, it streamlines the state and reducers into a single, coherent module.
+
+The initial state for the userMessages slice comprises:
+
+- `messages`: A list of all user messages.
+- `activeUserMessage`: Represents the currently highlighted or viewed user message.
+- `loading`: Indicates whether a specific operation related to messages is ongoing.
+- `error`: Captures any potential errors during message operations.
+- `starMessage`: Holds messages that have been marked as significant or starred.
+
+Reducers dictate how the state evolves in response to dispatched actions. For the userMessages slice, the following reducers are available:
+
+- `setMessages`: Updates the list of messages.
+- `setActiveUserMessage`: Alters the active user message.
+- `setStarMessage`: Updates the list of starred messages.
+- `setLoading`: Adjusts the loading status.
+- `setError`: Modifies the error state.
+
+Each reducer is accompanied by a respective action which can be dispatched to enact its intended changes on the state.
+
+
 ## Socket IO 🔌
 
 ![](https://i.postimg.cc/vm1QJBbp/Screenshot-2023-08-25-080902.png)
@@ -416,7 +441,4 @@ The constructor initializes and connects to a socket, sets the message receive c
 
 Hope the documentation was helpful and you got good insights on how things are streamlining and working in the project! 📖 <br/>
 Make sure to share it with your friends and colleagues, who are looking forward to contributing to the project and exponentially grow their learning curve 🚀 <br/>
-Don't forget to explore official [Sunbird UCI](https://uci.sunbird.org/) page and [UCI Github Repository](https://github.com/samagra-comms/uci-web-channel) 🔭 
-<p align="center">
-    <strong>Made with 💪🏻 by <a href="https://www.linkedin.com/in/rishit-gupta-4b18841b1/">Rishit Gupta</a></strong>
-</p>
+Don't forget to explore official [Sunbird UCI](https://uci.sunbird.org/) page and [UCI Github Repository](https://github.com/samagra-comms/uci-web-channel) 🙌🏻
