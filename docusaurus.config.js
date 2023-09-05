@@ -49,12 +49,12 @@ module.exports = {
       hideOnScroll: true,
       logo: {
         alt: 'Site Logo',
-        src: 'https://tech.samagragovernance.in/wp-content/uploads/2021/02/L2-e1614174909114.png',
+        src: 'https://i.postimg.cc/XvCZvvC7/Square.jpg',
         srcDark: '/logos/dark-logo.png',
         href: '/',
         target: '_self',
         width: "140px",
-        height: "45px"
+        height: "145px"
       },
       items: [
         {
@@ -173,7 +173,7 @@ module.exports = {
           icon: {
             alt: 'github logo',
             src: `/logos/github.svg`,
-            href: 'https://github.com/Samagra-Development/docs-template',
+            href: 'https://github.com/samagra-comms/uci-web-channel',
             target: '_blank',
           },
         },

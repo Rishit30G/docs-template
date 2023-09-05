@@ -4,7 +4,7 @@ sidebar_label: Overview
 slug: /
 hide_table_of_contents: true
 demoUrl: https://uci-web-channel-master.vercel.app/login
-demoSourceUrl: https://github.com/Samagra-Development/docs-template
+demoSourceUrl: https://github.com/samagra-comms/uci-web-channel
 ---
 
 import DocsCard from '@components/global/DocsCard';
