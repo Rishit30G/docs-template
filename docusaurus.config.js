@@ -50,11 +50,11 @@ module.exports = {
       logo: {
         alt: 'Site Logo',
         src: 'https://i.postimg.cc/XvCZvvC7/Square.jpg',
-        srcDark: '/logos/dark-logo.png',
+        // srcDark: '/logos/dark-logo.png',
         href: '/',
         target: '_self',
-        width: "140px",
-        height: "145px"
+        width: "80px",
+        height: "70px"
       },
       items: [
         {

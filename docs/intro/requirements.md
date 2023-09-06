@@ -96,7 +96,7 @@ yarn build or npm run build
 - Run application in dev environment
 
 ```
-yarn start or npm run dev 
+yarn run dev 
 ```
 
 This is implemented through [NextJS](nextjs.org) and [socket-package](https://www.npmjs.com/package/socket-package)
