@@ -75,7 +75,7 @@ origin  https://github.com/Your_Username/Nextjs-PWA.git (fetch)
 origin  https://github.com/Your_Username/Nextjs-PWA.git (push)
 ```
 
-### 4. Run it :checkered_flag:
+### 4. Install and Build 💻
 
 - Install dependencies
 
@@ -83,26 +83,21 @@ origin  https://github.com/Your_Username/Nextjs-PWA.git (push)
 yarn install
 ```
 
-- Run application in dev environment
-
-```
-yarn dev
-```
-
-Browse - http://localhost:3000
-
-### 5. Rendering Offline 💻
-
 - Build the code
 
 ```
 yarn build
 ```
 
+Browse - http://localhost:3000
+
+### 5. Running the application 🏃‍♂️
+
+
 - Run application in dev environment
 
 ```
-yarn start
+yarn run dev 
 ```
 
 This is implemented through [next-pwa](https://www.npmjs.com/package/next-pwa) and [offline-sync-handler](https://www.npmjs.com/package/offline-sync-handler).

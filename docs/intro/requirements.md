@@ -75,23 +75,24 @@ origin  https://github.com/Your_Username/uci-web-channel.git (fetch)
 origin  https://github.com/Your_Username/uci-web-channel.git (push)
 ```
 
-### 4. Run it :checkered_flag:
+### 4. Install and Build 💻
 
 - Install dependencies
 
 ```
-yarn install or npm install 
+yarn install
 ```
-
-Browse it on: ```http://localhost:3003```
-
-### 5. Rendering Offline 💻
 
 - Build the code
 
 ```
-yarn build or npm run build 
+yarn build
 ```
+
+Browse - `http://localhost:3003`
+
+### 5. Running the application 🏃‍♂️
+
 
 - Run application in dev environment
 
