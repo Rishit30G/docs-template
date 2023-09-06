@@ -17,6 +17,17 @@ In this section, we will provide you with a comprehensive overview of the Adopte
 
 - [User Journey Overview 🚀](#user-journey-overview)
 - [Application Features and Usage 🌟](#application-features-and-usage)
+  - [URLs Configuration and Environment Setup](#urls-configuration)
+  - [Configuration Management with `config`](#config)
+  - [Global Theme Management and Dark Mode 🎨](#global-theme)
+     - [Theme Configuration](#theme)
+     - [Using the Theme Provider](#theme-provider)
+     - [Customizing Theme Colors and Using Local Storage 🎨](#theme-customization)
+  - [Using ESLint, Prettier, and Husky for Code Consistency ✨](#prettier-and-eslint)
+     - [Setting Up ESLint and Prettier](#prettier-and-eslint)
+     - [ESLint Configuration for Different Directories](#eslint-extended)
+     - [Automating Code Consistency Checks with Husky](#husky)
+     - [Further Customization and Resources](#further-customization-and-resources)
 
 ## User Journey Overview 🚀
 <a id="user-journey-overview"></a>
@@ -29,6 +40,7 @@ As an adopter of the application, your journey starts here. This section will gu
 Our application offers a range of features designed to enhance your experience and productivity. From managing user interactions to accessing valuable insights, you'll find everything you need to achieve your objectives. Dive into our user-friendly interface, engage in meaningful conversations, and explore the power of intelligent automation.
 
 ### URLs Configuration and Environment Setup
+<a id="urls-configuration"></a>
 
 1. #### Accessing urlsConfig
 
@@ -151,6 +163,7 @@ By effectively utilizing the `urlsConfig`, you'll be able to effortlessly manage
 **Note:** It's important to ensure that your environment variables are correctly set up in your development and production environments for this feature to work as intended.
 
 ### Configuration Management with `config`
+<a id="config"></a>
 
 The `config` feature empowers you to centralize and manage various visual and functional aspects of the application in a single place. This includes settings for UI elements, icons, styles, URLs, and more. With the `config` object, you can effortlessly tailor your application's look and behavior without digging deep into the codebase. Let's dive into how to utilize and extend the `config` feature:
 
@@ -215,21 +228,129 @@ The `config` feature empowers you to centralize and manage various visual and fu
 4. **Adding New Components**:
    - You can introduce new UI components to the `config` object.
    - Define a new section, such as `newComponent`, and configure its properties.
-   - Access the new component in your code using `config.newComponent`.
+   -Here's how to utilize and extend the config feature effectively:
 
+   ***Accessing the config Object***
+
+   Firstly, ensure that you import the config object from the config.ts file inside the config folder, which you can access like this:
+
+   ```typescript
+   import { config } from '@/config/config';
+   ```
+
+   ***Applying config Settings in Styled-Components***
+
+   Now, let's explore how to leverage the config settings within styled-components, making the styling process seamless and modular. For instance, let's create a styled button component using config properties:
+
+   ```typescript
+   import styled from 'styled-components';
+
+   // Define a styled component using config properties
+   export const StyledButton = styled.button`
+    background-color: ${config.button.backgroundColor};
+    color: ${config.button.textColor};
+    border: ${config.button.border};
+    border-radius: ${config.button.borderRadius};
+    padding: ${config.button.padding};
+    font-size: ${config.button.fontSize};
+    
+    &:hover {
+        background-color: ${config.button.hoverBackgroundColor};
+    }
+   `;
+   ```
+   
+   ***Using the Styled Component in the Components***
+
+   Having created a styled component using config properties, you can now seamlessly incorporate it into your components. Here's an example of how you can use StyledButton within your component:
+
+   ```typescript
+   import React from 'react';
+   import { StyledButton } from './StyledComponents'; // Update the import path
+
+   const MyComponent = () => {
+    return (
+        <div>
+            <StyledButton>Click me</StyledButton>
+        </div>
+    );
+   };
+   export default MyComponent;
+   ```
+
+   ***Customizing config for Your Needs***
+
+   To make the most of the config feature, you can tailor the settings according to the requirements. For instance, you can modify properties like button.backgroundColor, button.textColor, button.border, and more to align with the desired styles:
+
+   ```typescript
+   // config.ts
+   export const config = {
+    button: {
+        backgroundColor: 'blue',
+        textColor: 'white',
+        border: 'none',
+        borderRadius: '5px',
+        padding: '10px 20px',
+        fontSize: '16px',
+        hoverBackgroundColor: 'darkblue', // Customize hover color
+    },
+    // ... other config properties
+   };
+   ```
+   
 5. **Extending the `config`**:
-   - As your application evolves, feel free to extend the `config` object with new sections and properties as needed.
-   - This ensures that your application remains flexible and adapts to new requirements without major code modifications.
+   - As the application evolves, feel free to extend the `config` object with new sections and properties as needed.
 
-By harnessing the power of the `config` feature, you can quickly iterate on your application's appearance, behavior, and other settings. It encourages a modular approach to design and development, ultimately leading to a smoother and more maintainable codebase.
+   ***Adding New Sections to config***
+
+   To cater to new functionalities or UI components, you can introduce entirely new sections within the config object. For instance, if you're adding a section for a "Notification Bar," you can proceed as follows:
+
+   ```typescript
+   // Extend the config object with a new "notificationBar" section
+   config.notificationBar = {
+    backgroundColor: '#FF5733',
+    textColor: '#FFFFFF',
+    icon: 'bell', // Icon name or path
+    // Add more properties as needed
+   };
+   ```
+   By following this approach, you've created a dedicated section within config to manage the styling and behavior of your Notification Bar.
+
+   ***Configuring New Properties***
+
+   Within each new section, you can define specific properties that cater to the requirements of your application. For instance, in the "notificationBar" section, you can set properties like backgroundColor, textColor, icon, and any other relevant attributes.
+
+   ```typescript
+   // Example of extending the "notificationBar" section
+   config.notificationBar = {
+    backgroundColor: '#FF5733',
+    textColor: '#FFFFFF',
+    icon: 'bell', // Icon name or path
+    // Add more properties as needed
+   };
+   ```
+   ***Accessing Extended config Properties***
+
+   Once you've extended the config object, accessing the newly added properties is straightforward. Simply reference them using dot notation within your application code. For instance, to apply the background color of the Notification Bar:
+
+   ```typescript
+   // Access and apply the Notification Bar background color
+   const notificationBarBackgroundColor = config.notificationBar.backgroundColor;
+   ```
+   Example
+
+   chat-item/styled.ts
+   ![Alt text](image-16.png)
 
 **Note:** While configuring the settings in `config`, be mindful of any dependencies or libraries used within your application to ensure seamless integration.
 
 ### Global Theme Management and Dark Mode 🎨
+<a id="global-theme"></a>
 
 Maintaining a consistent and visually appealing user interface is crucial for any application. The project provides a robust global theme management system that includes support for a dark mode. This allows you to seamlessly manage the appearance of the application and provide a better user experience.
 
 ### Theme Configuration
+<a id="theme"></a>
 
 The theme configuration is organized into a dedicated file, `theme.ts`(config folder), where you can customize various design elements to create a visually consistent application.
 
@@ -242,6 +363,7 @@ Here are the key components of the theme configuration:
   ![Alt text](image-12.png)
 
 #### Using the Theme Provider
+<a id="theme-provider"></a>
 
 We've implemented a `ThemeProvider` component that encapsulates the logic for theme management, including toggling between light and dark modes.
 
@@ -303,13 +425,14 @@ We've implemented a `ThemeProvider` component that encapsulates the logic for th
 
 
 #### Customizing Theme Colors and Using Local Storage 🎨
+<a id="theme-customization"></a>
 
 Our global theme management system provides flexibility for adopters to customize the colors of the theme in both light and dark modes. Additionally, we utilize local storage to store and remember user preferences for the selected theme mode.
 
 ![Alt text](image-9.png)
 
 #### Customizing Theme Colors
-
+  
   To customize theme colors for both light and dark modes, follow these steps:
 
   1. Open the `theme.ts` file in your project.
@@ -338,11 +461,10 @@ Our global theme management system provides flexibility for adopters to customiz
 
 Consistent theming not only enhances the visual appeal of your app but also provides a seamless experience for users. Users can choose between light and dark modes based on their preference and lighting conditions.
 
-By centralizing theme management, you simplify the process of maintaining a cohesive design language throughout your app. Whether you're building new components or expanding existing ones, you can confidently use the defined theme styles and elements to create a unified user interface.
-
 Feel free to customize the theme properties in the `theme.ts` file to align with your application's branding and design guidelines.
 
 ### Using ESLint, Prettier, and Husky for Code Consistency ✨
+<a id="prettier-and-eslint"></a>
 
 Maintaining consistent code quality and style is essential for collaborative development. We've integrated ESLint, Prettier, and Husky into our project to help you achieve code consistency effortlessly.
 
@@ -374,6 +496,7 @@ We've set up two scripts to help you maintain code consistency:
    - Prettier enforces a consistent code style, such as indentation, line breaks, and more.
 
 #### ESLint Configuration for Different Directories
+<a id="eslint-extended"></a>
 
 Our project follows a modular structure, and each directory might have specific coding standards. To accommodate this, we have individual ESLint configurations for each directory. These configurations can be found within the respective directories.
 
@@ -385,6 +508,7 @@ For example:
 - Similar `.eslintrc.js` files will be present in other directories, such as `packages/*` and `tsdx/*`.
 
 #### Automating Code Consistency Checks with Husky
+<a id="husky"></a>
 
 1. **Pre-Commit Hooks**:
    - Husky enables you to define actions that run automatically before commits are made.
